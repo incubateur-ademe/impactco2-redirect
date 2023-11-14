@@ -1,9 +1,7 @@
 location /itineraire {
-  proxy_pass https://impactco2.fr/transport/itineraire;
-  proxy_redirect default;
+  return 301 https://impactco2.fr/transport/itineraire;
 }
 
 location /transport {
-  proxy_pass https://impactco2.fr/transport/;
-  proxy_redirect default;
+  return 301 https://impactco2.fr/transport/;
 }
