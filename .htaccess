@@ -2,4 +2,5 @@ RewriteEngine ON
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^.*[^/]$ /$0/ [L,R=301]
-RewriteRule ^((.*)[^/])$ $1/ [L,R=301]
+RewriteRule ^([_0-9a-zA-Z-]+/)?itineraire$ $1itineraire/ [R=301,L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?transport$ $1transport/ [R=301,L]
