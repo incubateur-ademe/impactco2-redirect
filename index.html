@@ -7,8 +7,7 @@
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             var currentUrl = new URL(window.location.href);
-            var redirectUrl = new URL('https://impactco2.fr/transport');
-            
+            var redirectUrl = new URL('https://impactco2.fr/transport'+currentUrl.pathname);
             // Copier tous les paramètres de requête
             for (var pair of currentUrl.searchParams.entries()) {
                 redirectUrl.searchParams.append(pair[0], pair[1]);
