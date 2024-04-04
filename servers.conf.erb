@@ -1,7 +1,8 @@
 # Redirection pour monimpacttransport.fr avec des cas spéciaux pour les chemins iframe.js
 server {
-    listen 80;
+    listen <%= ENV['PORT'] %>;
     server_name monimpacttransport.fr www.monimpacttransport.fr;
+    charset utf-8;
 
     location = /iframe.js {
         root /app/transport;
@@ -29,8 +30,9 @@ server {
 
 # Redirection pour mesfruitsetlegumesdesaison.fr avec cas spécial pour iframe.js
 server {
-    listen 80;
+    listen <%= ENV['PORT'] %>;
     server_name mesfruitsetlegumesdesaison.fr www.mesfruitsetlegumesdesaison.fr;
+    charset utf-8;
 
     location = /iframe.js {
         root /app/fruitsetlegumes;
@@ -44,8 +46,9 @@ server {
 
 # Redirections spécifiques pour datagir.ademe.fr
 server {
-    listen 80;
+    listen <%= ENV['PORT'] %>;
     server_name datagir.ademe.fr;
+    charset utf-8;
 
     location = /apps/mon-convertisseur-co2 {
         return 301 https://impactco2.fr/comparateur;
@@ -66,8 +69,9 @@ server {
 
 # Gestion des autres domaines par redirection simple
 server {
-    listen 80;
+    listen <%= ENV['PORT'] %>;
     server_name monconvertisseurco2.fr www.monconvertisseurco2.fr;
+    charset utf-8;
 
     location = /iframe.js {
         return 301 https://impactco2.fr/iframe.js;
@@ -79,8 +83,9 @@ server {
 }
 
 server {
-    listen 80;
+    listen <%= ENV['PORT'] %>;
     server_name impactco2.ademe.fr www.impactco2.ademe.fr datagir.ademe.fr www.datagir.ademe.fr;
+    charset utf-8;
 
     location / {
         return 301 https://impactco2.fr;
