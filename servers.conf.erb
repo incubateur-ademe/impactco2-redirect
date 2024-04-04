@@ -67,6 +67,29 @@ server {
     }
 }
 
+# Redirections spécifiques pour datagir.fr
+server {
+    listen <%= ENV['PORT'] %>;
+    server_name datagir.fr;
+    charset utf-8;
+
+    location = /apps/mon-convertisseur-co2 {
+        return 301 https://impactco2.fr/comparateur;
+    }
+
+    location = /apps/mon-impact-transport {
+        return 301 https://impactco2.fr/transport;
+    }
+
+    location = /apps/teletravail {
+        return 301 https://impactco2.fr/transport;
+    }
+
+    location / {
+        return 301 https://impactco2.fr;
+    }
+}
+
 # Gestion des autres domaines par redirection simple
 server {
     listen <%= ENV['PORT'] %>;
