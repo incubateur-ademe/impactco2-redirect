@@ -7,6 +7,7 @@ Use `BUILDPACK_URL`'s https://github.com/Scalingo/nginx-buildpack.git internally
 Redirects are handled in "http" and "https", with and without "www".
 | URL | Redirection |
 | --- | --- |
+| impactco2-redirect.osc-fr1.scalingo.io | impactco2.fr |
 | impactco2.ademe.fr | impactco2.fr |
 | datagir.ademe.fr | impactco2.fr |
 | datagir.ademe.fr/apps/mon-convertisseur-co2 | impactco2.fr/comparateur |
