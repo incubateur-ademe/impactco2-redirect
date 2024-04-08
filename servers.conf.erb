@@ -67,6 +67,10 @@ server {
         return 301 https://impactco2.fr/transport;
     }
 
+    location = /apps/mesfruitsetlegumesdesaison {
+        return 301 https://impactco2.fr/fruitsetlegumes;
+    }
+
     location / {
         return 301 https://impactco2.fr;
     }
@@ -89,6 +93,10 @@ server {
 
     location = /apps/teletravail {
         return 301 https://impactco2.fr/transport;
+    }
+
+    location = /apps/mesfruitsetlegumesdesaison {
+        return 301 https://impactco2.fr/fruitsetlegumes;
     }
 
     location / {
