@@ -16,6 +16,7 @@ Redirects are handled in "http" and "https", with and without "www".
 | datagir.fr | impactco2.fr |
 | datagir.fr/apps/mon-convertisseur-co2 | impactco2.fr/comparateur |
 | datagir.fr/apps/mon-impact-transport | impactco2.fr/transport |
+| datagir.fr/apps/mesfruitsetlegumesdesaison  | impactco2.fr/fruitsetlegumes |
 | datagir.fr/apps/teletravail | impactco2.fr/transport |
 | monconvertisseurco2.fr | impactco2.fr/comparateur |
 | monconvertisseurco2.fr/iframe.js | impactco2.fr/iframe.fr |
